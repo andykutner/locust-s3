@@ -192,6 +192,7 @@ func deleteObject() {
 		time.Sleep(1000 * time.Millisecond)
 		return
 	}
+	time.Sleep(25 * time.Millisecond)
 
 	start := time.Now().UnixNano() / config.LoadConf.Locust.TimeResolution
 	_, err := svc.DeleteObject(&s3.DeleteObjectInput{
